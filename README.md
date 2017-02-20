@@ -1,5 +1,4 @@
-# pi-gen
-
+# pi-gen [![Build Status](https://travis-ci.org/StefanScherer/pi-gen.svg?branch=my)](https://travis-ci.org/StefanScherer/pi-gen)
 _Tool used to create the raspberrypi.org Raspbian images_
 
 
