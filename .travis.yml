@@ -21,7 +21,7 @@ deploy:
   skip_cleanup: true
   api_key: ${GITHUB_TOKEN}
   file:
-    - stage2/*.img.zip
+    - deploy/image_$(date +%Y-%m-%d)-Raspbian-lite.zip
   on:
     tags: true
     repo: StefanScherer/pi-gen
