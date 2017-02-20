@@ -2,7 +2,7 @@
     "partitions": [
         {
             "filesystem_type": "FAT",
-            "label": "boot",
+            "label": "cidata",
             "partition_size_nominal": BOOT_NOM,
             "uncompressed_tarball_size": BOOT_SIZE,
             "want_maximised": false
