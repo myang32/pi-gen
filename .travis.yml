@@ -1,0 +1,24 @@
+sudo: required
+services:
+  - docker
+language: bash
+script:
+  - echo IMG_NAME='Raspbian' >config
+  - touch ./stage3/SKIP ./stage4/SKIP
+  - rm stage4/EXPORT*
+  - ./build-docker.sh
+  - ls -l deploy/
+branches:
+  only:
+    - my
+    - /^v\d.*$/
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key: ${GITHUB_TOKEN}
+  file:
+    - stage2/*.img.zip
+  on:
+    tags: true
+    repo: StefanScherer/pi-gen
+
