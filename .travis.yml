@@ -6,7 +6,7 @@ script:
   # Create config
   - echo IMG_NAME='Raspbian' >config
   # Build only Raspbian LITE
-  - touch ./stage3/SKIP ./stage4/SKIP
+  - touch ./stage3/SKIP ./stage4/SKIP ./stage5/SKIP
   - rm stage4/EXPORT*
   # Build with Docker
   - ./build-docker.sh
