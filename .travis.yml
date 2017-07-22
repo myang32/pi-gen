@@ -7,7 +7,7 @@ script:
   - echo IMG_NAME='Raspbian' >config
   # Build only Raspbian LITE
   - touch ./stage3/SKIP ./stage4/SKIP ./stage5/SKIP
-  - rm stage4/EXPORT*
+  - rm stage4/EXPORT* stage5/EXPORT*
   # Build with Docker
   - ./build-docker.sh
   # List artifacts
@@ -15,6 +15,7 @@ script:
 branches:
   only:
     - my
+    - stretch
     - /^v\d.*$/
 deploy:
   provider: releases
